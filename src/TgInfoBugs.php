@@ -55,7 +55,8 @@ class TgInfoBugs
         $trace = $throwable->getTrace();
 
         $result = "Message: {$message}" . PHP_EOL
-            . "Trace {$trace[0]}";
+            . 'Trace0 ' . json_encode($trace[0])
+            . 'Trace1 ' . json_encode($trace[1]);
 
         return $this->messages($result);
     }
